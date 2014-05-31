@@ -13,3 +13,7 @@ The first function is rgb2lab, it does kind of exactly what you'd expect, making
 The second one is lab2rgb, and it's kind of the inverse of lab2rgb. That is, in an ideal world, you could expect that `lab2rgb(rgb2lab([a, b, c]))` would return `[a, b, c]`, which probably won't be the case due to quirks of floating point arithmetic. 
 
 But if you feed functions values which lie squarely within the acceptable range (R, G, B between 0 and 255), things should be okay.
+
+## deltaE([labA], [labB])
+
+This function calculates DeltaE, the perceptual color distance between any two random colors in the L*a*b* space.
